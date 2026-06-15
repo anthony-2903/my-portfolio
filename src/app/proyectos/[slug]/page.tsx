@@ -45,15 +45,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="project-detail-copy">
           <span className="project-detail-number">Proyecto {project.number}</span>
           <p className="section-label">{project.type}</p>
-          <h1>{project.title}</h1>
+          <h1 data-gsap-title>{project.title}</h1>
           <p>{project.copy}</p>
           <div className="project-detail-tags">
             {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
           </div>
         </div>
-        <div className="project-detail-cover">
+        <div className="project-detail-cover" data-gsap-mask>
           <Image
             src={project.image}
+            data-gsap-parallax
             alt={`Vista principal de ${project.title}`}
             fill
             priority
@@ -66,7 +67,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="gallery-heading">
           <div>
             <p className="section-label">Galería del proyecto</p>
-            <h2>Todas las <span>interfaces.</span></h2>
+            <h2 data-gsap-title>Todas las <span>interfaces.</span></h2>
           </div>
           <div className="gallery-count">
             <Images size={20} />

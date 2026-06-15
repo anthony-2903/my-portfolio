@@ -161,7 +161,7 @@ export default function Home() {
             Disponible para nuevas oportunidades
           </div>
           <p className="hero-kicker fade-in delay-1">Hola, soy Anthony Janampa</p>
-          <h1 className="fade-in delay-1">
+          <h1 className="fade-in delay-1" data-gsap-title>
             Construyo experiencias digitales que <em>conectan.</em>
           </h1>
           <p className="hero-copy fade-in delay-2">
@@ -235,7 +235,7 @@ export default function Home() {
 
       <section id="sobre-mi" className="about section-shell content-section">
         <div className="section-number">01</div>
-        <div className="about-layout">
+        <div className="about-layout" data-gsap-mask>
           <div>
             <p className="section-label">Sobre mí</p>
             <h2>Curiosidad técnica.<br /><span>Impacto real.</span></h2>
@@ -269,7 +269,7 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <p className="section-label">Trayectoria</p>
-              <h2>Experiencia que<br /><span>construye criterio.</span></h2>
+              <h2 data-gsap-title>Experiencia que<br /><span>construye criterio.</span></h2>
             </div>
             <p>Una ruta entre desarrollo, soporte tecnológico y operaciones.</p>
           </div>
@@ -293,10 +293,10 @@ export default function Home() {
       </section>
 
       <section id="proyectos" className="projects section-shell content-section">
-        <div className="section-heading">
+        <div className="section-heading" data-gsap-mask>
           <div>
             <p className="section-label">Proyectos</p>
-            <h2>Ideas convertidas en<br /><span>soluciones reales.</span></h2>
+            <h2 data-gsap-title>Ideas convertidas en<br /><span>soluciones reales.</span></h2>
           </div>
           <p>
             Este espacio está preparado para presentar el proceso, la tecnología
@@ -314,6 +314,7 @@ export default function Home() {
               <div className="project-preview">
                 <Image
                   className="project-cover"
+                  data-gsap-parallax
                   src={project.image}
                   alt={`Vista principal del proyecto ${project.title}`}
                   fill
@@ -349,10 +350,10 @@ export default function Home() {
       </section>
 
       <section id="habilidades" className="skills section-shell content-section">
-        <div className="section-heading">
+        <div className="section-heading" data-gsap-mask>
           <div>
             <p className="section-label">Stack técnico</p>
-            <h2>Herramientas para<br /><span>hacer que suceda.</span></h2>
+            <h2 data-gsap-title>Herramientas para<br /><span>hacer que suceda.</span></h2>
           </div>
           <p>Tecnología con propósito, desde la interfaz hasta los datos.</p>
         </div>
@@ -384,9 +385,9 @@ export default function Home() {
 
       <section id="contacto" className="contact content-section">
         <div className="contact-glow" aria-hidden="true" />
-        <div className="section-shell contact-inner">
+        <div className="section-shell contact-inner" data-gsap-mask>
           <p className="section-label">Contacto</p>
-          <h2>¿Construimos algo<br /><span>juntos?</span></h2>
+          <h2 data-gsap-title>¿Construimos algo<br /><span>juntos?</span></h2>
           <p className="contact-copy">
             Estoy abierto a oportunidades donde pueda aportar, aprender y crear
             productos digitales con impacto.
