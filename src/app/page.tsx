@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -23,6 +25,7 @@ import {
   SiPython,
   SiReact,
 } from "react-icons/si";
+import { projects } from "@/data/projects";
 
 const tools = [
   { name: "React", icon: SiReact, color: "#61dafb" },
@@ -34,24 +37,6 @@ const tools = [
   { name: "GitHub", icon: SiGithub, color: "#ffffff" },
   { name: "Git", icon: SiGit, color: "#f05032" },
   { name: "Python", icon: SiPython, color: "#ffd43b" },
-];
-
-const projectSlots = [
-  {
-    number: "01",
-    title: "Tu proyecto destacado",
-    copy: "Aquí mostraremos el problema que resolviste, tu aporte y el resultado del proyecto.",
-  },
-  {
-    number: "02",
-    title: "Aplicación web",
-    copy: "Espacio para una captura, las tecnologías utilizadas y enlaces a demo y GitHub.",
-  },
-  {
-    number: "03",
-    title: "Proyecto de datos o backend",
-    copy: "Una tarjeta preparada para explicar arquitectura, funcionalidades y aprendizajes.",
-  },
 ];
 
 const experience = [
@@ -319,27 +304,46 @@ export default function Home() {
           </p>
         </div>
         <div className="projects-grid">
-          {projectSlots.map((project) => (
-            <article className="project-card" key={project.number}>
+          {projects.map((project) => (
+            <Link
+              className={`project-card${project.featured ? " project-featured" : ""}`}
+              key={project.number}
+              href={`/proyectos/${project.slug}`}
+              aria-label={`Ver todas las imágenes de ${project.title}`}
+            >
               <div className="project-preview">
+                <Image
+                  className="project-cover"
+                  src={project.image}
+                  alt={`Vista principal del proyecto ${project.title}`}
+                  fill
+                  sizes={project.featured ? "(max-width: 680px) 100vw, 1180px" : "(max-width: 960px) 50vw, 580px"}
+                />
+                {project.secondaryImage && (
+                  <div className="project-secondary">
+                    <Image
+                      src={project.secondaryImage}
+                      alt={`Vista interna del proyecto ${project.title}`}
+                      fill
+                      sizes="220px"
+                    />
+                  </div>
+                )}
                 <span className="project-number">{project.number}</span>
-                <Code2 size={38} aria-hidden="true" />
-                <span className="project-pending">Proyecto por agregar</span>
+                <span className="project-status">Proyecto desarrollado</span>
               </div>
               <div className="project-body">
                 <div>
-                  <span className="project-type">Caso de estudio</span>
+                  <span className="project-type">{project.type}</span>
                   <h3>{project.title}</h3>
                 </div>
                 <ArrowUpRight size={21} aria-hidden="true" />
                 <p>{project.copy}</p>
                 <div className="project-tags">
-                  <span>Tecnologías</span>
-                  <span>Demo</span>
-                  <span>Repositorio</span>
+                  {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
