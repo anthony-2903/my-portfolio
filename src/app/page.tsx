@@ -12,7 +12,6 @@ import {
   Network,
   Phone,
   ServerCog,
-  Sparkles,
 } from "lucide-react";
 import { FaJava, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import {
@@ -26,6 +25,7 @@ import {
   SiReact,
 } from "react-icons/si";
 import { projects } from "@/data/projects";
+import { jsonLdScript, personJsonLd, portfolioJsonLd } from "@/lib/seo";
 
 const tools = [
   { name: "React", icon: SiReact, color: "#61dafb" },
@@ -103,6 +103,14 @@ const strengths = [
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(personJsonLd()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(portfolioJsonLd()) }}
+      />
       <nav className="nav-shell" aria-label="Navegación principal">
         <a href="#inicio" className="nav-identity" aria-label="Ir al inicio">
           <span className="brand-mark">AJ<span>.</span></span>
@@ -257,7 +265,7 @@ export default function Home() {
             </div>
             <div className="strength-list">
               {strengths.map((strength) => (
-                <span key={strength}><Sparkles size={14} />{strength}</span>
+                <span key={strength}>{strength}</span>
               ))}
             </div>
           </div>

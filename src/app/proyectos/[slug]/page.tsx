@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowUpRight, Images } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ProjectGallery } from "@/components/project-gallery";
 import { getProject, projects } from "@/data/projects";
+import { absoluteUrl, jsonLdScript, siteConfig } from "@/lib/seo";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -21,8 +22,34 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   if (!project) return {};
 
   return {
-    title: `${project.title} | Proyecto de Anthony Janampa`,
+    title: `${project.title} | Proyecto frontend`,
     description: project.copy,
+    keywords: [...siteConfig.keywords, project.title, project.type, ...project.tags],
+    alternates: {
+      canonical: `/proyectos/${project.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      locale: siteConfig.locale,
+      url: absoluteUrl(`/proyectos/${project.slug}`),
+      siteName: siteConfig.name,
+      title: `${project.title} | Proyecto de Anthony Janampa`,
+      description: project.copy,
+      images: [
+        {
+          url: absoluteUrl(project.image),
+          width: 1200,
+          height: 630,
+          alt: `Vista principal del proyecto ${project.title}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | Proyecto de Anthony Janampa`,
+      description: project.copy,
+      images: [absoluteUrl(project.image)],
+    },
   };
 }
 
@@ -32,8 +59,26 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   if (!project) notFound();
 
+  const projectJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.copy,
+    url: absoluteUrl(`/proyectos/${project.slug}`),
+    image: [absoluteUrl(project.image), ...project.gallery.map((image) => absoluteUrl(image.src))],
+    keywords: project.tags.join(", "),
+    creator: {
+      "@type": "Person",
+      name: siteConfig.name,
+    },
+  };
+
   return (
     <main className="project-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(projectJsonLd) }}
+      />
       <header className="project-page-nav section-shell">
         <Link href="/#proyectos" className="project-back">
           <ArrowLeft size={17} /> Volver al portafolio
