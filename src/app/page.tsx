@@ -23,6 +23,7 @@ import {
   SiPostgresql,
   SiPython,
   SiReact,
+  SiRender,
 } from "react-icons/si";
 import { projects } from "@/data/projects";
 import { jsonLdScript, personJsonLd, portfolioJsonLd } from "@/lib/seo";
@@ -35,6 +36,7 @@ const tools = [
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169e1" },
   { name: "Java", icon: FaJava, color: "#f89820" },
   { name: "GitHub", icon: SiGithub, color: "#ffffff" },
+  { name: "Render", icon: SiRender, color: "#46e3b7" },
   { name: "Git", icon: SiGit, color: "#f05032" },
   { name: "Python", icon: SiPython, color: "#ffd43b" },
 ];
