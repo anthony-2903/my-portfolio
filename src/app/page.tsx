@@ -16,6 +16,7 @@ import {
 import { FaJava, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import {
   SiAngular,
+  SiAstro,
   SiGit,
   SiGithub,
   SiNextdotjs,
@@ -31,6 +32,7 @@ import { jsonLdScript, personJsonLd, portfolioJsonLd } from "@/lib/seo";
 const tools = [
   { name: "React", icon: SiReact, color: "#61dafb" },
   { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+  { name: "Astro", icon: SiAstro, color: "#ff5d01" },
   { name: "Node.js", icon: SiNodedotjs, color: "#5fa04e" },
   { name: "Angular", icon: SiAngular, color: "#dd0031" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169e1" },
