@@ -6,67 +6,71 @@ import {
   Code2,
   Database,
   Download,
-  PenTool,
   Mail,
   MapPin,
-  Network,
   Phone,
+  ShieldCheck,
   ServerCog,
 } from "lucide-react";
-import { FaJava, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import {
-  SiAngular,
-  SiAstro,
+  SiFastapi,
   SiGit,
   SiGithub,
-  SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
   SiPython,
   SiReact,
   SiRender,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVercel,
+  SiVite,
 } from "react-icons/si";
 import { projects } from "@/data/projects";
 import { jsonLdScript, personJsonLd, portfolioJsonLd } from "@/lib/seo";
 
 const tools = [
   { name: "React", icon: SiReact, color: "#61dafb" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
-  { name: "Astro", icon: SiAstro, color: "#ff5d01" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178c6" },
+  { name: "Vite", icon: SiVite, color: "#a855f7" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38bdf8" },
+  { name: "Supabase", icon: SiSupabase, color: "#3ecf8e" },
+  { name: "FastAPI", icon: SiFastapi, color: "#009688" },
   { name: "Node.js", icon: SiNodedotjs, color: "#5fa04e" },
-  { name: "Angular", icon: SiAngular, color: "#dd0031" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169e1" },
-  { name: "Java", icon: FaJava, color: "#f89820" },
+  { name: "Python", icon: SiPython, color: "#ffd43b" },
   { name: "GitHub", icon: SiGithub, color: "#ffffff" },
+  { name: "Vercel", icon: SiVercel, color: "#ffffff" },
   { name: "Render", icon: SiRender, color: "#46e3b7" },
   { name: "Git", icon: SiGit, color: "#f05032" },
-  { name: "Python", icon: SiPython, color: "#ffd43b" },
 ];
 
 const experience = [
   {
-    period: "Abr 2025 — Nov 2025",
-    role: "Practicante preprofesional · Área TI",
+    period: "1 año y medio",
+    role: "Asistente TI",
     company: "Universidad Peruana Unión",
     description:
-      "Soporte y mantenimiento de hardware, actualización de equipos y gestión de laboratorios de Ingeniería de Sistemas.",
-    tags: ["Soporte TI", "Hardware", "Laboratorios", "Redes"],
+      "Soporte a laboratorios especializados de software, equipos de cómputo, conectividad de red, instalación de software y atención de incidencias.",
+    tags: ["Soporte TI", "Laboratorios", "Redes", "Infraestructura"],
   },
   {
-    period: "Mar 2024 — Feb 2025",
-    role: "Frontend Developer · Prácticas",
+    period: "Prácticas",
+    role: "Desarrollo Frontend",
     company: "CUDESI S.A.C.",
     description:
-      "Diseño y desarrollo de páginas web, construcción de interfaces y consumo de APIs con tecnologías frontend modernas.",
-    tags: ["React", "Next.js", "JavaScript", "UI Design"],
+      "Desarrollo de interfaces web, componentes frontend, maquetación responsive y vistas orientadas a mejorar la presentación de información.",
+    tags: ["React", "Responsividad", "UI", "Componentes"],
   },
   {
-    period: "Dic 2022 — Mar 2023",
-    role: "Asistente de logística",
-    company: "RAURA · Santa Catalina",
+    period: "Prácticas",
+    role: "Desarrollo de Sistema Kardex",
+    company: "Santa Catalina, contrata de Raura",
     description:
-      "Gestión de kardex de EPP, documentación y seguimiento de solicitudes y materiales del área.",
-    tags: ["Kardex", "Documentación", "Logística"],
+      "Participación en un sistema Kardex para control, registro, validación y seguimiento interno de información operativa.",
+    tags: ["Kardex", "Datos", "Validación", "Trazabilidad"],
   },
 ];
 
@@ -75,25 +79,25 @@ const skillGroups = [
     icon: Code2,
     title: "Frontend",
     description: "Interfaces web modernas, accesibles y adaptables.",
-    skills: ["React", "Next.js", "Vite", "JavaScript", "HTML", "CSS", "Bootstrap"],
+    skills: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Radix UI", "Framer Motion"],
   },
   {
     icon: Database,
-    title: "Datos & BI",
-    description: "Gestión, consumo y visualización de información.",
-    skills: ["Oracle", "MySQL", "MongoDB", "Power BI", "ETL"],
+    title: "Backend & Datos",
+    description: "APIs, bases de datos y procesamiento de información.",
+    skills: ["Python", "FastAPI", "Node.js", "Supabase", "PostgreSQL", "Pandas", "NumPy"],
   },
   {
-    icon: Network,
-    title: "Infraestructura",
-    description: "Soporte técnico, redes y comunicaciones.",
-    skills: ["Redes", "Hardware", "Soporte TI", "Mantenimiento"],
+    icon: ShieldCheck,
+    title: "Seguridad & Calidad",
+    description: "Aplicaciones protegidas, mantenibles y verificables.",
+    skills: ["Auth", "Roles", "RLS", "Validación", "ESLint", "Vitest", "Playwright"],
   },
   {
-    icon: PenTool,
-    title: "Diseño & Herramientas",
-    description: "Del prototipo a una experiencia funcional.",
-    skills: ["Figma", "Photoshop", "VS Code", "Git", "Codex"],
+    icon: ServerCog,
+    title: "DevOps & Cloud",
+    description: "Publicación, configuración y operación de proyectos web.",
+    skills: ["Git", "GitHub", "Vercel", "Render", "Cloudflare", "Variables de entorno", "AWS básico"],
   },
 ];
 
@@ -101,7 +105,8 @@ const strengths = [
   "Trabajo en equipo",
   "Adaptabilidad",
   "Aprendizaje continuo",
-  "Creatividad",
+  "Código modular",
+  "Documentación técnica",
 ];
 
 export default function Home() {
@@ -120,7 +125,7 @@ export default function Home() {
           <span className="brand-mark">AJ<span>.</span></span>
           <span className="brand-copy">
             <strong>Anthony Janampa</strong>
-            <small>Systems Engineer</small>
+            <small>Full Stack Junior</small>
           </span>
         </a>
         <div className="nav-links">
@@ -174,11 +179,11 @@ export default function Home() {
           </div>
           <p className="hero-kicker fade-in delay-1">Hola, soy Anthony Janampa</p>
           <h1 className="fade-in delay-1" data-gsap-title>
-            Construyo experiencias digitales que <em>conectan.</em>
+            Construyo soluciones web full stack que <em>resuelven.</em>
           </h1>
           <p className="hero-copy fade-in delay-2">
-            Ingeniero de Sistemas enfocado en desarrollo frontend, diseño de
-            interfaces e infraestructura tecnológica.
+            Bachiller en Ingeniería de Sistemas enfocado en React, TypeScript,
+            Supabase, FastAPI, dashboards, automatización y despliegue cloud.
           </p>
           <div className="hero-actions fade-in delay-2">
             <a href="#experiencia" className="button button-primary">
@@ -205,9 +210,9 @@ export default function Home() {
                 <span className="typing-line line-1"><span className="code-purple">const</span> developer = &#123;</span>
                 <span className="typing-line line-2">  <span className="code-blue">name</span>: <span className="code-green">&quot;Anthony&quot;</span>,</span>
                 <span className="typing-line line-3">  <span className="code-blue">focus</span>: <span className="code-green">&quot;Full Stack&quot;</span>,</span>
-                <span className="typing-line line-4">  <span className="code-blue">frontend</span>: [<span className="code-green">&quot;React&quot;</span>, <span className="code-green">&quot;Next.js&quot;</span>, <span className="code-green">&quot;Angular&quot;</span>],</span>
-                <span className="typing-line line-5">  <span className="code-blue">backend</span>: [<span className="code-green">&quot;Node.js&quot;</span>, <span className="code-green">&quot;Java&quot;</span>],</span>
-                <span className="typing-line line-6">  <span className="code-blue">database</span>: <span className="code-green">&quot;PostgreSQL&quot;</span>,</span>
+                <span className="typing-line line-4">  <span className="code-blue">frontend</span>: [<span className="code-green">&quot;React&quot;</span>, <span className="code-green">&quot;TypeScript&quot;</span>, <span className="code-green">&quot;Tailwind&quot;</span>],</span>
+                <span className="typing-line line-5">  <span className="code-blue">backend</span>: [<span className="code-green">&quot;FastAPI&quot;</span>, <span className="code-green">&quot;Node.js&quot;</span>, <span className="code-green">&quot;Supabase&quot;</span>],</span>
+                <span className="typing-line line-6">  <span className="code-blue">database</span>: <span className="code-green">&quot;PostgreSQL + RLS&quot;</span>,</span>
                 <span className="typing-line line-7">  <span className="code-blue">language</span>: <span className="code-green">&quot;Python&quot;</span>,</span>
                 <span className="typing-line line-8">  <span className="code-blue">workflow</span>: [<span className="code-green">&quot;Git&quot;</span>, <span className="code-green">&quot;GitHub&quot;</span>],</span>
                 <span className="typing-line line-9">  <span className="code-blue">mindset</span>: <span className="code-green">&quot;keep learning&quot;</span></span>
@@ -216,7 +221,7 @@ export default function Home() {
             </pre>
           </div>
           <div className="floating-tag tag-react">React</div>
-          <div className="floating-tag tag-next">Next.js</div>
+          <div className="floating-tag tag-next">Supabase</div>
         </div>
 
         <a href="#sobre-mi" className="scroll-hint" aria-label="Desplazarse a Sobre mí">
@@ -254,17 +259,17 @@ export default function Home() {
           </div>
           <div className="about-copy">
             <p className="lead">
-              Soy Ingeniero de Sistemas con experiencia en desarrollo frontend,
-              soporte tecnológico y gestión de infraestructura.
+              Soy bachiller en Ingeniería de Sistemas y desarrollador Full Stack
+              Junior con experiencia en proyectos web, dashboards, reportes y soporte TI.
             </p>
             <p>
-              Disfruto transformar ideas en productos digitales claros y
-              funcionales. Mi formación integral me permite entender tanto la
-              experiencia del usuario como la tecnología que la sostiene.
+              Trabajo con React, TypeScript, Supabase, FastAPI y Python para
+              transformar ideas en productos digitales claros y funcionales,
+              cuidando seguridad, documentación, despliegue y mantenimiento.
             </p>
             <div className="facts">
-              <div><strong>1+</strong><span>Año en frontend</span></div>
-              <div><strong>3</strong><span>Áreas de experiencia</span></div>
+              <div><strong>6+</strong><span>Proyectos web</span></div>
+              <div><strong>1.5</strong><span>Años en soporte TI</span></div>
               <div><strong>∞</strong><span>Ganas de aprender</span></div>
             </div>
             <div className="strength-list">
@@ -283,7 +288,7 @@ export default function Home() {
               <p className="section-label">Trayectoria</p>
               <h2 data-gsap-title>Experiencia que<br /><span>construye criterio.</span></h2>
             </div>
-            <p>Una ruta entre desarrollo, soporte tecnológico y operaciones.</p>
+            <p>Una ruta entre desarrollo full stack, soporte tecnológico y operaciones.</p>
           </div>
           <div className="timeline">
             {experience.map((item, index) => (
@@ -311,8 +316,7 @@ export default function Home() {
             <h2 data-gsap-title>Ideas convertidas en<br /><span>soluciones reales.</span></h2>
           </div>
           <p>
-            Este espacio está preparado para presentar el proceso, la tecnología
-            y el impacto de cada proyecto.
+            Este espacio presenta el proceso, la tecnología y el impacto de cada proyecto.
           </p>
         </div>
         <div className="projects-grid">
@@ -385,7 +389,7 @@ export default function Home() {
           <div className="education-icon"><ServerCog size={28} /></div>
           <div>
             <span>Formación académica</span>
-            <h3>Ingeniería de Sistemas</h3>
+            <h3>Bachiller en Ingeniería de Sistemas</h3>
             <p>Universidad Peruana Unión · Lima, Perú</p>
           </div>
           <div className="language">
