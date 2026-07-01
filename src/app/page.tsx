@@ -130,8 +130,8 @@ export default function Home() {
         </a>
         <div className="nav-links">
           <a href="#sobre-mi"><span>01</span>Sobre mí</a>
-          <a href="#experiencia"><span>02</span>Experiencia</a>
-          <a href="#proyectos"><span>03</span>Proyectos</a>
+          <a href="#proyectos"><span>02</span>Proyectos</a>
+          <a href="#experiencia"><span>03</span>Experiencia</a>
           <a href="#habilidades"><span>04</span>Habilidades</a>
         </div>
         <a href="#contacto" className="nav-cta">
@@ -186,7 +186,7 @@ export default function Home() {
             Supabase, FastAPI, dashboards, automatización y despliegue cloud.
           </p>
           <div className="hero-actions fade-in delay-2">
-            <a href="#experiencia" className="button button-primary">
+            <a href="#proyectos" className="button button-primary">
               Conoce mi trabajo <ArrowDown size={17} />
             </a>
             <a
@@ -281,34 +281,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experiencia" className="experience content-section">
-        <div className="section-shell">
-          <div className="section-heading">
-            <div>
-              <p className="section-label">Trayectoria</p>
-              <h2 data-gsap-title>Experiencia que<br /><span>construye criterio.</span></h2>
-            </div>
-            <p>Una ruta entre desarrollo full stack, soporte tecnológico y operaciones.</p>
-          </div>
-          <div className="timeline">
-            {experience.map((item, index) => (
-              <article className="timeline-item" key={item.company}>
-                <div className="timeline-index">0{index + 1}</div>
-                <div className="timeline-date">{item.period}</div>
-                <div className="timeline-content">
-                  <h3>{item.role}</h3>
-                  <p className="company">{item.company}</p>
-                  <p className="description">{item.description}</p>
-                  <div className="tag-list">
-                    {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="proyectos" className="projects section-shell content-section">
         <div className="section-heading" data-gsap-mask>
           <div>
@@ -362,6 +334,34 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section id="experiencia" className="experience content-section">
+        <div className="section-shell">
+          <div className="section-heading">
+            <div>
+              <p className="section-label">Trayectoria</p>
+              <h2 data-gsap-title>Experiencia que<br /><span>construye criterio.</span></h2>
+            </div>
+            <p>Una ruta entre desarrollo full stack, soporte tecnológico y operaciones.</p>
+          </div>
+          <div className="timeline">
+            {experience.map((item, index) => (
+              <article className="timeline-item" key={item.company}>
+                <div className="timeline-index">0{index + 1}</div>
+                <div className="timeline-date">{item.period}</div>
+                <div className="timeline-content">
+                  <h3>{item.role}</h3>
+                  <p className="company">{item.company}</p>
+                  <p className="description">{item.description}</p>
+                  <div className="tag-list">
+                    {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
