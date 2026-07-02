@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Anthony Janampa",
   title: "Anthony Janampa | Desarrollador Full Stack Junior",
   description:
-    "Portafolio profesional de Anthony Janampa, bachiller en Ingeniería de Sistemas y desarrollador Full Stack Junior especializado en React, TypeScript, Supabase, FastAPI, dashboards, automatización y despliegue cloud.",
+    "Portafolio profesional de Anthony Janampa, bachiller en Ingeniería de Sistemas y desarrollador Full Stack Junior especializado en React, TypeScript, Supabase, FastAPI, dashboards, automatización, despliegue cloud, soporte TI e infraestructura de red.",
   locale: "es_PE",
   email: "anthonyjanampacalderon10@gmail.com",
   phone: "+51 914 299 860",
@@ -24,6 +24,9 @@ export const siteConfig = {
     "Dashboards web",
     "Portafolio full stack",
     "Soporte TI",
+    "Infraestructura TI",
+    "Redes y patch panel",
+    "Técnico de infraestructura TI",
   ],
 };
 
@@ -49,7 +52,7 @@ export function personJsonLd() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: siteConfig.name,
-    jobTitle: "Bachiller en Ingeniería de Sistemas y Desarrollador Full Stack Junior",
+    jobTitle: "Bachiller en Ingeniería de Sistemas, Desarrollador Full Stack Junior y Técnico de Infraestructura TI",
     email: siteConfig.email,
     telephone: siteConfig.phone,
     address: {
@@ -73,6 +76,9 @@ export function personJsonLd() {
       "Seguridad de software",
       "Infraestructura tecnológica",
       "Soporte TI",
+      "Redes",
+      "Patch panel",
+      "Cableado estructurado",
     ],
   };
 }

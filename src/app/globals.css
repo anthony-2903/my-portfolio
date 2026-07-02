@@ -115,6 +115,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .typing-line.line-5 { animation-delay: 1.8s; }.typing-line.line-6 { animation-delay: 2.25s; }
 .typing-line.line-7 { animation-delay: 2.7s; }.typing-line.line-8 { animation-delay: 3.15s; }
 .typing-line.line-9 { animation-delay: 3.6s; }.typing-line.line-10 { animation-delay: 4.05s; }
+.typing-line.line-11 { animation-delay: 4.5s; }
 .typing-cursor { display: inline-block; width: 7px; height: 14px; margin-left: 4px; vertical-align: -2px; background: var(--accent); animation: cursorBlink .75s steps(1) infinite; }
 @keyframes typeLine { 0% { width: 0; border-color: var(--accent); } 10%, 72% { width: 100%; border-color: transparent; } 88%, 100% { width: 0; border-color: transparent; } }
 @keyframes cursorBlink { 50% { opacity: 0; } }

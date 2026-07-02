@@ -75,8 +75,20 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "mingeotop",
+    slug: "sigescont-infraestructura",
     number: "04",
+    title: "SIGESCONT Infraestructura TI",
+    type: "Armado de gabinete, patch panel y conectividad",
+    image: "/projects/sigescont-infra-cover.webp",
+    copy: "Proyecto temporal de infraestructura de red enfocado en armado físico de gabinete/rack de comunicaciones, montaje y organización de patch panel, ordenamiento de cableado, conexión de patch cords, habilitación de puntos de red y pruebas de conectividad para verificar continuidad y disponibilidad del servicio.",
+    tags: ["Infraestructura TI", "Redes", "Rack", "Patch panel", "Cableado", "Testing"],
+    gallery: [
+      { src: "/projects/gallery/sigescont-infra/01.webp", width: 1600, height: 1000, label: "Diagrama de infraestructura y conectividad" },
+    ],
+  },
+  {
+    slug: "mingeotop",
+    number: "05",
     title: "MINGEOTOP",
     type: "Sitio corporativo y panel administrativo",
     image: "/projects/mingeotop-cover.webp",
@@ -93,7 +105,7 @@ export const projects: Project[] = [
   },
   {
     slug: "residencia-pro",
-    number: "05",
+    number: "06",
     title: "Residencia Pro",
     type: "Gestión residencial integral",
     image: "/projects/residencia-cover.webp",

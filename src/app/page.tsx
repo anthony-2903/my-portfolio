@@ -49,12 +49,20 @@ const tools = [
 
 const experience = [
   {
-    period: "1 año y medio",
+    period: "Enero 2025 - Junio 2026",
     role: "Asistente TI",
     company: "Universidad Peruana Unión",
     description:
-      "Soporte a laboratorios especializados de software, equipos de cómputo, conectividad de red, instalación de software y atención de incidencias.",
-    tags: ["Soporte TI", "Laboratorios", "Redes", "Infraestructura"],
+      "Soporte a laboratorios especializados, equipos de cómputo, software académico, conectividad de red, preparación de ambientes e incidencias operativas.",
+    tags: ["Soporte TI", "Laboratorios", "Redes", "Mantenimiento"],
+  },
+  {
+    period: "Freelance / por proyecto",
+    role: "Técnico de Infraestructura TI",
+    company: "SIGESCONT",
+    description:
+      "Armado de gabinete/rack de comunicaciones, montaje y organización de patch panel, ordenamiento de cableado, habilitación de puntos de red y pruebas de conectividad.",
+    tags: ["Infraestructura TI", "Rack", "Patch panel", "Cableado", "Testing"],
   },
   {
     period: "Prácticas",
@@ -95,9 +103,9 @@ const skillGroups = [
   },
   {
     icon: ServerCog,
-    title: "DevOps & Cloud",
-    description: "Publicación, configuración y operación de proyectos web.",
-    skills: ["Git", "GitHub", "Vercel", "Render", "Cloudflare", "Variables de entorno", "AWS básico"],
+    title: "DevOps, Cloud & Redes",
+    description: "Publicación, configuración e infraestructura para proyectos web y entornos TI.",
+    skills: ["Git", "GitHub", "Vercel", "Render", "Cloudflare", "AWS básico", "Rack", "Patch panel"],
   },
 ];
 
@@ -183,7 +191,7 @@ export default function Home() {
           </h1>
           <p className="hero-copy fade-in delay-2">
             Bachiller en Ingeniería de Sistemas enfocado en React, TypeScript,
-            Supabase, FastAPI, dashboards, automatización y despliegue cloud.
+            Supabase, FastAPI, dashboards, automatización, despliegue cloud e infraestructura TI.
           </p>
           <div className="hero-actions fade-in delay-2">
             <a href="#proyectos" className="button button-primary">
@@ -215,8 +223,9 @@ export default function Home() {
                 <span className="typing-line line-6">  <span className="code-blue">database</span>: <span className="code-green">&quot;PostgreSQL + RLS&quot;</span>,</span>
                 <span className="typing-line line-7">  <span className="code-blue">language</span>: <span className="code-green">&quot;Python&quot;</span>,</span>
                 <span className="typing-line line-8">  <span className="code-blue">workflow</span>: [<span className="code-green">&quot;Git&quot;</span>, <span className="code-green">&quot;GitHub&quot;</span>],</span>
-                <span className="typing-line line-9">  <span className="code-blue">mindset</span>: <span className="code-green">&quot;keep learning&quot;</span></span>
-                <span className="typing-line line-10">&#125;;<span className="typing-cursor" /></span>
+                <span className="typing-line line-9">  <span className="code-blue">infra</span>: [<span className="code-green">&quot;Redes&quot;</span>, <span className="code-green">&quot;Rack&quot;</span>, <span className="code-green">&quot;Patch panel&quot;</span>],</span>
+                <span className="typing-line line-10">  <span className="code-blue">mindset</span>: <span className="code-green">&quot;keep learning&quot;</span></span>
+                <span className="typing-line line-11">&#125;;<span className="typing-cursor" /></span>
               </code>
             </pre>
           </div>
@@ -260,12 +269,12 @@ export default function Home() {
           <div className="about-copy">
             <p className="lead">
               Soy bachiller en Ingeniería de Sistemas y desarrollador Full Stack
-              Junior con experiencia en proyectos web, dashboards, reportes y soporte TI.
+              Junior con experiencia en proyectos web, dashboards, reportes, soporte TI e infraestructura de red.
             </p>
             <p>
               Trabajo con React, TypeScript, Supabase, FastAPI y Python para
               transformar ideas en productos digitales claros y funcionales,
-              cuidando seguridad, documentación, despliegue y mantenimiento.
+              cuidando seguridad, documentación, despliegue, mantenimiento y operación tecnológica.
             </p>
             <div className="facts">
               <div><strong>6+</strong><span>Proyectos web</span></div>

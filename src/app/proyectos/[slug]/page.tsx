@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   if (!project) return {};
 
   return {
-    title: `${project.title} | Proyecto frontend`,
+    title: `${project.title} | Proyecto`,
     description: project.copy,
     keywords: [...siteConfig.keywords, project.title, project.type, ...project.tags],
     alternates: {
